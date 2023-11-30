@@ -1,0 +1,5 @@
+class rps_logic() {
+
+
+
+}
