@@ -1,4 +1,5 @@
 import kotlin.random.Random
+import kotlin.random.nextInt
 
 class RPSLogic {
 
@@ -46,6 +47,15 @@ class RPSLogic {
                 }
             }
         }
+        playAgain()
+    }
+
+    private fun playAgain() {
+        println("Do you want to play again, Yes or No")
+        val userInput = readln()
+        if (userInput.lowercase() in arrayOf("y", "yes", "yeah")) {
+            startGame()
+        }
     }
 
 
@@ -54,6 +64,7 @@ class RPSLogic {
     }
 
     private fun getInput(): Int {
+        println("Pick Rock, Paper or Scissors.")
         while (true) {
             val userInput = readln()
             if (userInput.lowercase() in arrayOf("1", "r", "rock")) {
@@ -75,10 +86,10 @@ class RPSLogic {
         if (state == 1) {
             println("Tie, both picked Rock.")
         }
-        if (state == 2) {
+        else if (state == 2) {
             println("Tie, both picked Paper.")
         }
-        if (state == 3) {
+        else if (state == 3) {
             println("Tie, both picked Scissors.")
         }
     }
@@ -87,10 +98,10 @@ class RPSLogic {
         if (state == 1) {
             println("You won, computer picked Scissors.")
         }
-        if (state == 2) {
+        else if (state == 2) {
             println("You won, computer picked Rock.")
         }
-        if (state == 3) {
+        else if (state == 3) {
             println("You won, computer picked Paper.")
         }
     }
@@ -99,10 +110,10 @@ class RPSLogic {
         if (state == 1) {
             println("You lost, computer picked Paper.")
         }
-        if (state == 2) {
+        else if (state == 2) {
             println("You lost, computer picked Scissors.")
         }
-        if (state == 3) {
+        else if (state == 3) {
             println("You lost, computer picked Rock.")
         }
     }

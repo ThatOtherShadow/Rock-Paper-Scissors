@@ -14,13 +14,14 @@ class IOControl {
 
     fun mainMenuIoCheck() {
         while (true) {
-            println("Enter 1 to play, Enter 2 for help, Enter 3, X or EXIT to exit")
+            println("Enter 1, P, or PLAY to play, Enter 2, H, or HELP for help, Enter 3, X or EXIT to exit")
             mainMenuInput = readln()
-            if (mainMenuInput == "1") {
+            if (mainMenuInput.lowercase() in arrayOf("1", "p", "play")) {
                 clearScreen()
                 rpsLogic.startGame()
             }
-            else if (mainMenuInput == "2") {
+            else if (mainMenuInput.lowercase() in arrayOf("2", "h", "help")) {
+                clearScreen()
                 helpMenu.showMenu()
             }
             else if (mainMenuInput.lowercase() in arrayOf("3", "x", "exit")) {
