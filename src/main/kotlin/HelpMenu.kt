@@ -1,7 +1,7 @@
-class help_menu() {
+class HelpMenu {
 
 
-    fun show_menu() {
+    fun showMenu() {
         println("""
         NOT IMPLEMENTED YET
         """.trimIndent())

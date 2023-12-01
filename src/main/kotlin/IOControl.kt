@@ -1,35 +1,35 @@
 import kotlin.system.exitProcess
 
-class io_control() {
-    val RPSLogic = rps_logic()
-    val HelpMenu = help_menu()
+class IOControl {
+    private val rpsLogic = RPSLogic()
+    private val helpMenu = HelpMenu()
 
-    var main_menu_input = "0"
+    private var mainMenuInput = "0"
 
-    fun exit() {
+    private fun exit() {
         println("Thanks for playing :)")
         Thread.sleep(1000)
         exitProcess(0)
     }
 
-    fun main_menu_io_check() {
+    fun mainMenuIoCheck() {
         while (true) {
             println("Enter 1 to play, Enter 2 for help, Enter 3, X or EXIT to exit")
-            main_menu_input = readln()
-            if (main_menu_input == "1") {
-                clear_screen()
-                RPSLogic.start_game()
+            mainMenuInput = readln()
+            if (mainMenuInput == "1") {
+                clearScreen()
+                rpsLogic.startGame()
             }
-            else if (main_menu_input == "2") {
-                HelpMenu.show_menu()
+            else if (mainMenuInput == "2") {
+                helpMenu.showMenu()
             }
-            else if (main_menu_input.lowercase() in arrayOf("3", "x", "exit")) {
+            else if (mainMenuInput.lowercase() in arrayOf("3", "x", "exit")) {
                 exit()
             }
         }
     }
 
-    fun clear_screen() {
+    private fun clearScreen() {
         println("""
             
             

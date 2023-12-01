@@ -1,6 +1,6 @@
-class rps_logic() {
+class RPSLogic {
 
-    fun start_game() {
+    fun startGame() {
         println("NOT IMPLEMENTED YET")
     }
 }
