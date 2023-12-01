@@ -1,5 +1,4 @@
 import kotlin.random.Random
-import kotlin.random.nextInt
 
 class RPSLogic {
 
@@ -83,38 +82,44 @@ class RPSLogic {
     }
 
     private fun tie(state: Int) {
-        if (state == 1) {
-            println("Tie, both picked Rock.")
-        }
-        else if (state == 2) {
-            println("Tie, both picked Paper.")
-        }
-        else if (state == 3) {
-            println("Tie, both picked Scissors.")
+        when (state) {
+            1 -> {
+                println("Tie, both picked Rock.")
+            }
+            2 -> {
+                println("Tie, both picked Paper.")
+            }
+            3 -> {
+                println("Tie, both picked Scissors.")
+            }
         }
     }
 
     private fun playerWin(state: Int) {
-        if (state == 1) {
-            println("You won, computer picked Scissors.")
-        }
-        else if (state == 2) {
-            println("You won, computer picked Rock.")
-        }
-        else if (state == 3) {
-            println("You won, computer picked Paper.")
+        when (state) {
+            1 -> {
+                println("You won, computer picked Scissors.")
+            }
+            2 -> {
+                println("You won, computer picked Rock.")
+            }
+            3 -> {
+                println("You won, computer picked Paper.")
+            }
         }
     }
 
     private fun playerLose(state: Int) {
-        if (state == 1) {
-            println("You lost, computer picked Paper.")
-        }
-        else if (state == 2) {
-            println("You lost, computer picked Scissors.")
-        }
-        else if (state == 3) {
-            println("You lost, computer picked Rock.")
+        when (state) {
+            1 -> {
+                println("You lost, computer picked Paper.")
+            }
+            2 -> {
+                println("You lost, computer picked Scissors.")
+            }
+            3 -> {
+                println("You lost, computer picked Rock.")
+            }
         }
     }
 }
