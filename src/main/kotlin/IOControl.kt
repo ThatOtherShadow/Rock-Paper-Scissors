@@ -24,6 +24,7 @@ class IOControl {
                 helpMenu.showMenu()
             }
             else if (mainMenuInput.lowercase() in arrayOf("3", "x", "exit")) {
+                clearScreen()
                 exit()
             }
         }
@@ -56,6 +57,42 @@ class IOControl {
             
             
             
-            """) // This is garbage, but I have no idea how to do it any other way.
-    }
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            """) // This is garbage, but I have no idea how to do it any other way,
+    }            // And for some reason, ANSI escape codes don't work. (Or im an idiot)
 }
