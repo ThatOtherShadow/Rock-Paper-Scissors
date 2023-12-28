@@ -32,68 +32,8 @@ class IOControl {
     }
 
     private fun clearScreen() {
-        println("""
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            """) // This is garbage, but I have no idea how to do it any other way,
-    }            // And for some reason, ANSI escape codes don't work. (Or im an idiot)
+        for(i in 1..100) {
+            println("")
+        }
+    }
 }
